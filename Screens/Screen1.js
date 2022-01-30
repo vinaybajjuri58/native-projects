@@ -5,8 +5,8 @@ export const Screen1 = ({navigation}) => {
     <View style={styles.screen}>
       <Text style={styles.headerStyle}>Screen 1</Text>
       <Button
-        onPress={() => navigation.navigate('Screen2')}
-        title="Go to Screen 2"
+        onPress={() => navigation.navigate('Details')}
+        title="Go to Details Screen"
       />
     </View>
   );

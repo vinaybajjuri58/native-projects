@@ -19,7 +19,7 @@ const App = () => {
     <NavigationContainer>
       <MyStack.Navigator>
         <MyStack.Screen name="Screen1" component={Screen1} />
-        <MyStack.Screen name="Screen2" component={Screen2} />
+        <MyStack.Screen name="Details" component={Screen2} />
       </MyStack.Navigator>
     </NavigationContainer>
   );

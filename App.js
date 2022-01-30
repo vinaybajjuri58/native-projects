@@ -8,12 +8,20 @@
 
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
+import {Screen1, Screen2} from './Screens';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+const MyStack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <View style={styles.sectionContainer}>
-      <Text style={styles.sectionTitle}>Hello World</Text>
-    </View>
+    <NavigationContainer>
+      <MyStack.Navigator>
+        <MyStack.Screen name="Screen1" component={Screen1} />
+        <MyStack.Screen name="Screen2" component={Screen2} />
+      </MyStack.Navigator>
+    </NavigationContainer>
   );
 };
 

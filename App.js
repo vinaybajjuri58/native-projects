@@ -8,12 +8,23 @@
 
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
+import {ProductsListingScreen, CartScreen} from './Screens';
+import {DataProvider} from './Context';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+const MyStack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <View style={styles.sectionContainer}>
-      <Text style={styles.sectionTitle}>Hello World</Text>
-    </View>
+    <NavigationContainer>
+      <DataProvider>
+        <MyStack.Navigator>
+          <MyStack.Screen name="Products" component={ProductsListingScreen} />
+          <MyStack.Screen name="Cart" component={CartScreen} />
+        </MyStack.Navigator>
+      </DataProvider>
+    </NavigationContainer>
   );
 };
 
